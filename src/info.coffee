@@ -1,7 +1,7 @@
 exports.fontinfo =
-	familyName: 'Prototypo Starter Kit'
+	familyName: 'Prototypo Serifs components'
 	version: '0.1.0'
-	description: 'A parametric typeface starter kit'
+	description: 'Prototypo serif components'
 	tags: [
 		'all',
 		'latin',

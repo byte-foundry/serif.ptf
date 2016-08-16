@@ -1,14 +1,14 @@
 {
-  "name": "starter-kit.ptf",
+  "name": "serif.ptf",
   "version": "1.0.0",
-  "description": "starter-kit Parametric Typeface",
+  "description": "serif Parametric Typeface",
   "main": "dist/typeface.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/byte-foundry/starter-kit.ptf.git"
+    "url": "git://github.com/byte-foundry/serif.ptf.git"
   },
   "keywords": [
     "parametric-typeface"
@@ -16,9 +16,9 @@
   "author": "Prototypo",
   "license": "Affero GPL",
   "bugs": {
-    "url": "https://github.com/byte-foundry/starter-kit.ptf/issues"
+    "url": "https://github.com/byte-foundry/serif.ptf/issues"
   },
-  "homepage": "https://github.com/byte-foundry/starter-kit.ptf",
+  "homepage": "https://github.com/byte-foundry/serif.ptf",
   "devDependencies": {
      "gulp": "~3.8.7",
      "gulp-load-plugins": "~0.6.0",

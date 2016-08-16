@@ -1,4 +1,4 @@
-# starter-kit.ptf
+# serif.ptf
 ===========
 
-Prototypo starter-kit to build a parametric typeface in Prototypo
+Prototypo serif components
