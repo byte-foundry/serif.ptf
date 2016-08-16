@@ -1,6 +1,6 @@
-exports.glyphs['f'] =
-	unicode: 'f'
-	glyphName: 'f'
+exports.glyphs['i'] =
+	unicode: 'i'
+	glyphName: 'i'
 	characterName: 'LATIN SMALL LETTER F'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
@@ -43,13 +43,20 @@ exports.glyphs['f'] =
 						distr: 0.5
 					})
 	components:
+		# 0:
+		# 	base: 'round-corner'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[0].expandedTo[0].point
+		# 			opposite: contours[0].nodes[0].expandedTo[1].point
+		# 			obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
 		0:
-			base: 'round-corner'
+			base: 'serif-vertical'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					# anchor: 0
 		1:
 			base: 'round-corner'
 			parentAnchors:
@@ -57,13 +64,25 @@ exports.glyphs['f'] =
 					base: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
+		# 2:
+		# 	base: 'round-corner'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[1].expandedTo[0].point
+		# 			opposite: contours[0].nodes[1].expandedTo[1].point
+		# 			obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
 		2:
-			base: 'round-corner'
+			base: 'serif-vertical'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+					# anchor: xHeight
+			transformOrigin: contours[0].nodes[1].point
+			transforms: Array(
+				[ 'skewY', 18 * serifRotate + 'deg' ],
+				[ 'scaleY', -1 ]
+			)
 		3:
 			base: 'round-corner'
 			parentAnchors:

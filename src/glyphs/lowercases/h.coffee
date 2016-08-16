@@ -1,9 +1,9 @@
-exports.glyphs['f'] =
-	unicode: 'f'
-	glyphName: 'f'
-	characterName: 'LATIN SMALL LETTER F'
+exports.glyphs['h'] =
+	unicode: 'h'
+	glyphName: 'h'
+	characterName: 'LATIN SMALL LETTER H'
 	ot:
-		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -26,8 +26,8 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 100 - (50)
-					y: Math.max( 0, 0 + serifArc * serifHeight + roundCorner )
+					x: spacingLeft + (50)
+					y: Math.min( xHeight, xHeight - serifArc * serifHeight - roundCorner )
 					typeOut: 'line'
 					expand: Object({
 						width: ( 100 / 90 ) * thickness
@@ -35,8 +35,8 @@ exports.glyphs['f'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[0].nodes[0].x
-					y: Math.min( xHeight, xHeight - serifArc * serifHeight - roundCorner )
+					x: contours[0].nodes[0].x + 100
+					y: Math.max( 0, 0 + serifArc * serifHeight + roundCorner )
 					expand: Object({
 						width: ( 100 / 90 ) * thickness
 						angle: 0 + 'deg'
@@ -47,9 +47,9 @@ exports.glyphs['f'] =
 			base: 'round-corner'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
 		1:
 			base: 'round-corner'
 			parentAnchors:
@@ -61,13 +61,13 @@ exports.glyphs['f'] =
 			base: 'round-corner'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[1].point
 		3:
 			base: 'round-corner'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[1].point
-					opposite: contours[0].nodes[1].expandedTo[0].point
-					obliqueEndPoint: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point

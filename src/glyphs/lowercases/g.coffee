@@ -1,7 +1,7 @@
-exports.glyphs['b'] =
-	unicode: 'b'
-	glyphName: 'b'
-	characterName: 'LATIN SMALL LETTER B'
+exports.glyphs['g'] =
+	unicode: 'g'
+	glyphName: 'g'
+	characterName: 'LATIN SMALL LETTER G'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -10,6 +10,7 @@ exports.glyphs['b'] =
 	parameters:
 		spacingLeft: 50 * spacing
 		spacingRight: 50 * spacing
+		roundCorner: serifHeight
 	tags: [
 		'all',
 		'latin',
@@ -26,7 +27,7 @@ exports.glyphs['b'] =
 			nodes:
 				0:
 					x: spacingLeft + 100 - (50)
-					y: Math.max( 0, 0 + serifArc * serifHeight )
+					y: Math.max( 0, 0 + serifArc * serifHeight + roundCorner )
 					typeOut: 'line'
 					expand: Object({
 						width: ( 100 / 90 ) * thickness
@@ -35,7 +36,7 @@ exports.glyphs['b'] =
 					})
 				1:
 					x: contours[0].nodes[0].x + 100
-					y: Math.min( xHeight, xHeight - serifArc * serifHeight )
+					y: Math.min( xHeight, xHeight - serifArc * serifHeight - roundCorner )
 					expand: Object({
 						width: ( 100 / 90 ) * thickness
 						angle: 0 + 'deg'
@@ -43,42 +44,30 @@ exports.glyphs['b'] =
 					})
 	components:
 		0:
-			base: 'serif-oblique-obtuse'
+			base: 'round-corner'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
 		1:
-			base: 'serif-oblique-obtuse'
+			base: 'round-corner'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1].point
 					opposite: contours[0].nodes[1].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[1].point
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
 		2:
-			base: 'serif-oblique-acute'
+			base: 'round-corner'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
-					scaleX: -1
 		3:
-			base: 'serif-oblique-acute'
+			base: 'round-corner'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
-					scaleX: -1
-			transformOrigin: contours[0].nodes[1].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)

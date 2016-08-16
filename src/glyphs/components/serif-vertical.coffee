@@ -1,5 +1,6 @@
 exports.glyphs['serif-vertical'] =
 	parameters:
+		roundCorner: serifHeight # TODO: make a real param in controls.coffee
 		serifWidth:
 			if serifHeight < 0.05
 			then serifWidth = 0.05

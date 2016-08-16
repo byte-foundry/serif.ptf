@@ -25,7 +25,7 @@ exports.glyphs['d'] =
 					y: xHeight / 2
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
@@ -33,7 +33,7 @@ exports.glyphs['d'] =
 					x: contours[0].nodes[0].x + 500 - Math.max( 0, serifArc * serifHeight )
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

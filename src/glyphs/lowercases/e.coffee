@@ -25,7 +25,7 @@ exports.glyphs['e'] =
 					y: capHeight - 150
 					# dirOut: 120 + 'deg'
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 180 + 30 + 'deg'
 						distr: 0
 					})
@@ -34,7 +34,7 @@ exports.glyphs['e'] =
 					y: capHeight
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -43,7 +43,7 @@ exports.glyphs['e'] =
 					y: capHeight / 2
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 0 + 'deg'
 						distr: 1
 					})
@@ -52,7 +52,7 @@ exports.glyphs['e'] =
 					y: 0
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -60,7 +60,7 @@ exports.glyphs['e'] =
 					x: contours[0].nodes[0].x
 					y: 150
 					expand: Object({
-						width: thickness
+						width: ( 100 / 90 ) * thickness
 						angle: 150 + 'deg'
 						distr: 0
 					})

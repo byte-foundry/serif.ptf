@@ -29,7 +29,7 @@ exports.glyphs['a'] =
 					y: Math.max( 0, 0 + serifArc * serifHeight )
 					typeOut: 'line'
 					expand: Object({
-						width: 100
+						width: ( 100 / 90 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -37,7 +37,7 @@ exports.glyphs['a'] =
 					x: contours[0].nodes[0].x
 					y: Math.min( xHeight, xHeight - serifArc * serifHeight )
 					expand: Object({
-						width: 100
+						width: ( 100 / 90 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
