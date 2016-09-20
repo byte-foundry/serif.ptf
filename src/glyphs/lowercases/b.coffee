@@ -68,6 +68,7 @@ exports.glyphs['b'] =
 					base: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
 					scaleX: -1
 		3:
 			base: 'serif-oblique-acute'
@@ -77,6 +78,7 @@ exports.glyphs['b'] =
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
 					scaleX: -1
+					reversed: true
 			transformOrigin: contours[0].nodes[1].expandedTo[0].point
 			transforms: Array(
 				[ 'scaleX', -1 ],

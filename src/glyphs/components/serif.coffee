@@ -43,6 +43,7 @@ exports.glyphs['serif'] =
 	contours:
 		0:
 			closed: true
+			exportReversed: true
 			nodes:
 				0:
 					x: Math.max( Math.min(anchors[0].x, anchors[2].min0.x), anchors[2].max0.x )

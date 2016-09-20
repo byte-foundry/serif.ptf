@@ -59,16 +59,48 @@ exports.glyphs['e'] =
 				4:
 					x: contours[0].nodes[0].x
 					y: 150
+					dirIn: 60 + 'deg'
 					expand: Object({
 						width: ( 100 / 90 ) * thickness
 						angle: 150 + 'deg'
 						distr: 0
 					})
-	# components:
-	# 	0:
-	# 		base: 'serif-curve-outside'
-	# 		parentAnchors:
-	# 			0:
-	# 				base: contours[0].nodes[4].expandedTo[0]
-	# 				opposite: contours[0].nodes[4].expandedTo[1].point
-	# 				curveEnd: contours[0].nodes[3].expandedTo[0]
+	components:
+	 	0:
+	 		base: 'serif-curve-inside-auto'
+	 		parentAnchors:
+	 			0:
+	 				base: contours[0].nodes[4].expandedTo[0]
+	 				opposite: contours[0].nodes[4].expandedTo[0].point
+	 				curveEnd: contours[0].nodes[3].expandedTo[0]
+	 				down: true
+	 				rotationAngle: -18
+	 				rotationCenter: contours[0].nodes[4].expandedTo[0].point
+	 	1:
+	 		base: 'serif-curve-inside-auto'
+	 		parentAnchors:
+	 			0:
+	 				base: contours[0].nodes[4].expandedTo[1]
+	 				opposite: contours[0].nodes[4].expandedTo[0].point
+	 				curveEnd: contours[0].nodes[3].expandedTo[1]
+	 				rotationAngle: -18
+	 				rotationCenter: contours[0].nodes[4].expandedTo[0].point
+	 	2:
+	 		base: 'serif-curve-inside-auto'
+	 		parentAnchors:
+	 			0:
+	 				base: contours[0].nodes[0].expandedTo[0]
+	 				opposite: contours[0].nodes[0].expandedTo[0].point
+	 				curveEnd: contours[0].nodes[1].expandedTo[0]
+	 				rotationAngle: 18
+	 				rotationCenter: contours[0].nodes[0].expandedTo[0].point
+	 	3:
+	 		base: 'serif-curve-inside-auto'
+	 		parentAnchors:
+	 			0:
+	 				base: contours[0].nodes[0].expandedTo[1]
+	 				opposite: contours[0].nodes[0].expandedTo[0].point
+	 				curveEnd: contours[0].nodes[1].expandedTo[1]
+	 				down: true
+	 				rotationAngle: 18
+	 				rotationCenter: contours[0].nodes[0].expandedTo[0].point

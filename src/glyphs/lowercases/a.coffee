@@ -54,6 +54,7 @@ exports.glyphs['a'] =
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
 				[ 'scaleX', -1 ]
@@ -65,6 +66,7 @@ exports.glyphs['a'] =
 					base: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					# spur: 20
+					reversed: true
 			transformOrigin: contours[0].nodes[1].point
 			transforms: Array(
 				[ 'skewY', 18 * serifRotate + 'deg' ],
